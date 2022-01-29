@@ -1,0 +1,15 @@
+C:\Users\juven\source\repos\AppCertificado\AppCertificado\bin\Release\AppCertificado.exe.config
+C:\Users\juven\source\repos\AppCertificado\AppCertificado\bin\Release\AppCertificado.exe
+C:\Users\juven\source\repos\AppCertificado\AppCertificado\bin\Release\AppCertificado.pdb
+C:\Users\juven\source\repos\AppCertificado\AppCertificado\bin\Release\DocumentFormat.OpenXml.dll
+C:\Users\juven\source\repos\AppCertificado\AppCertificado\bin\Release\OpenXmlPowerTools.dll
+C:\Users\juven\source\repos\AppCertificado\AppCertificado\bin\Release\System.Management.Automation.dll
+C:\Users\juven\source\repos\AppCertificado\AppCertificado\bin\Release\DocumentFormat.OpenXml.xml
+C:\Users\juven\source\repos\AppCertificado\AppCertificado\obj\Release\AppCertificado.csproj.AssemblyReference.cache
+C:\Users\juven\source\repos\AppCertificado\AppCertificado\obj\Release\AppCertificado.Form1.resources
+C:\Users\juven\source\repos\AppCertificado\AppCertificado\obj\Release\AppCertificado.Properties.Resources.resources
+C:\Users\juven\source\repos\AppCertificado\AppCertificado\obj\Release\AppCertificado.csproj.GenerateResource.cache
+C:\Users\juven\source\repos\AppCertificado\AppCertificado\obj\Release\AppCertificado.csproj.CoreCompileInputs.cache
+C:\Users\juven\source\repos\AppCertificado\AppCertificado\obj\Release\AppCertificado.csproj.CopyComplete
+C:\Users\juven\source\repos\AppCertificado\AppCertificado\obj\Release\AppCertificado.exe
+C:\Users\juven\source\repos\AppCertificado\AppCertificado\obj\Release\AppCertificado.pdb
