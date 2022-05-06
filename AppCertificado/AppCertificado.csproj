@@ -106,6 +106,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Certificados\convertidor-imagen.ico" />
+    <Content Include="Certificados\convertidor-imagen.png" />
     <Content Include="Certificados\FIRMA-negra.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

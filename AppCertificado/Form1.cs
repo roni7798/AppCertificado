@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
+using Application = Microsoft.Office.Interop.Word.Application;
+using Microsoft.Office.Interop.Word;
 
 
 namespace AppCertificado
@@ -61,18 +63,18 @@ namespace AppCertificado
             if (GenerarWord()) {
                 MostrarMensajeWord();
                 BlanquearDatos();
-            }                       
+            }
         }
 
         private void CrearArchivo()
         {
-            File.Copy(@"C:\Program Files (x86)\RoniCorp\Certificados\Certificado-Template.docx", path + @"\Certificado_"+txtNombre.Text+"_"+txtApellido.Text+".docx");
+            File.Copy(@"C:\Program Files (x86)\RoniCorp\Certificados\Certificado-Template.docx", path + @"\Certificado_" + txtNombre.Text + "_" + txtApellido.Text + ".docx");
         }
 
         private void ModificarArchivo(List<string> parametros, List<string> valores)
         {
             string ruta_archivo = path + @"\Certificado_" + txtNombre.Text + "_" + txtApellido.Text + ".docx";
-            for (int i = 0; i < parametros.Count; i++) {                
+            for (int i = 0; i < parametros.Count; i++) {
                 using (WordprocessingDocument doc = WordprocessingDocument.Open(ruta_archivo, true))
                     TextReplacer.SearchAndReplace(wordDoc: doc, search: parametros[i], replace: valores[i], matchCase: false);
             }
@@ -128,7 +130,7 @@ namespace AppCertificado
         }
         private void MostrarMensajeWord()
         {
-            string message = "El archivo fue creado con éxito en la siguiente ruta:\n "+path+ @"\Certificado_" + txtNombre.Text + "_" + txtApellido.Text + ".docx"; ;
+            string message = "El archivo fue creado con éxito en la siguiente ruta:\n " + path + @"\Certificado_" + txtNombre.Text + "_" + txtApellido.Text + ".docx"; ;
             string title = "Aviso!";
             MessageBox.Show(message, title);
         }
@@ -148,7 +150,7 @@ namespace AppCertificado
             txtDescripcionTitulo.Text = null;
             listaDocumentos_ComboBox.Text = "";
         }
-        private string obtenerDocumentoActualizado() 
+        private string obtenerDocumentoActualizado()
         {
             char delimitador = '-';
             string[] documentoArray = listaDocumentos_ComboBox.SelectedItem.ToString().Split(delimitador);
@@ -156,11 +158,56 @@ namespace AppCertificado
             return docuActualizado;
         }
 
-       
-        
+        private bool GenerarPDF()
+        {
+            if (GenerarWord())
+            {
+                string exportDir = path;
+                string pathWord = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\Certificado_" + txtNombre.Text + "_" + txtApellido.Text + ".docx";
+                Application app = new Application();
+                app.DisplayAlerts = WdAlertLevel.wdAlertsNone;
+                app.Visible = true;
+
+                var objPresSet = app.Documents;
+                var objPres = objPresSet.Add(pathWord);
+
+
+                var pdfFileName = Path.ChangeExtension(pathWord, ".pdf");
+                var pdfPath = Path.Combine(exportDir, pdfFileName);
+
+
+                try
+                {
+                    objPres.ExportAsFixedFormat(pdfPath, WdExportFormat.wdExportFormatPDF, false, WdExportOptimizeFor.wdExportOptimizeForPrint,
+                        WdExportRange.wdExportAllDocument);
+                    return true;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                    return false;
+                }
+                finally
+                {
+                    //objPresSet.Close();
+                    app.Quit();                    
+                    //MessageBox.Show("PDF generado correctamente!");
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
         private void GenerarCertificadoPDF_Click(object sender, EventArgs e)
         {
-            
+            if (GenerarPDF())
+            {
+                MostrarMensajePDF();
+                BlanquearDatos();
+            }
         }
     }
+        
+    
 }

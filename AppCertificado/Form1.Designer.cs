@@ -31,6 +31,7 @@ namespace AppCertificado
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.lblNombreCurso = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblApellido = new System.Windows.Forms.Label();
@@ -89,7 +90,7 @@ namespace AppCertificado
             // txtNombreCurso
             // 
             this.txtNombreCurso.Location = new System.Drawing.Point(297, 74);
-            this.txtNombreCurso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombreCurso.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreCurso.Multiline = true;
             this.txtNombreCurso.Name = "txtNombreCurso";
             this.txtNombreCurso.Size = new System.Drawing.Size(1153, 42);
@@ -98,7 +99,7 @@ namespace AppCertificado
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(297, 162);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(1153, 42);
@@ -107,7 +108,7 @@ namespace AppCertificado
             // txtApellido
             // 
             this.txtApellido.Location = new System.Drawing.Point(297, 252);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellido.Multiline = true;
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(1153, 42);
@@ -116,7 +117,7 @@ namespace AppCertificado
             // txtDNI
             // 
             this.txtDNI.Location = new System.Drawing.Point(869, 341);
-            this.txtDNI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDNI.Margin = new System.Windows.Forms.Padding(4);
             this.txtDNI.Multiline = true;
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(581, 42);
@@ -127,7 +128,7 @@ namespace AppCertificado
             this.txtDescripcionTitulo.AcceptsReturn = true;
             this.txtDescripcionTitulo.AcceptsTab = true;
             this.txtDescripcionTitulo.Location = new System.Drawing.Point(297, 437);
-            this.txtDescripcionTitulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescripcionTitulo.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescripcionTitulo.Multiline = true;
             this.txtDescripcionTitulo.Name = "txtDescripcionTitulo";
             this.txtDescripcionTitulo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -136,19 +137,20 @@ namespace AppCertificado
             // 
             // GenerarCertificadoWord
             // 
-            this.GenerarCertificadoWord.Location = new System.Drawing.Point(431, 630);
-            this.GenerarCertificadoWord.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GenerarCertificadoWord.Location = new System.Drawing.Point(93, 630);
+            this.GenerarCertificadoWord.Margin = new System.Windows.Forms.Padding(4);
             this.GenerarCertificadoWord.Name = "GenerarCertificadoWord";
             this.GenerarCertificadoWord.Size = new System.Drawing.Size(265, 62);
             this.GenerarCertificadoWord.TabIndex = 10;
             this.GenerarCertificadoWord.Text = "Generar Certificado Word";
             this.GenerarCertificadoWord.UseVisualStyleBackColor = true;
+            this.GenerarCertificadoWord.Visible = false;
             this.GenerarCertificadoWord.Click += new System.EventHandler(this.GenerarCertificadoWord_Click);
             // 
             // GenerarCertificadoPDF
             // 
-            this.GenerarCertificadoPDF.Location = new System.Drawing.Point(813, 630);
-            this.GenerarCertificadoPDF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GenerarCertificadoPDF.Location = new System.Drawing.Point(632, 630);
+            this.GenerarCertificadoPDF.Margin = new System.Windows.Forms.Padding(4);
             this.GenerarCertificadoPDF.Name = "GenerarCertificadoPDF";
             this.GenerarCertificadoPDF.Size = new System.Drawing.Size(265, 62);
             this.GenerarCertificadoPDF.TabIndex = 11;
@@ -170,7 +172,7 @@ namespace AppCertificado
             // 
             this.listaDocumentos_ComboBox.FormattingEnabled = true;
             this.listaDocumentos_ComboBox.Location = new System.Drawing.Point(93, 357);
-            this.listaDocumentos_ComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listaDocumentos_ComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.listaDocumentos_ComboBox.Name = "listaDocumentos_ComboBox";
             this.listaDocumentos_ComboBox.Size = new System.Drawing.Size(767, 24);
             this.listaDocumentos_ComboBox.TabIndex = 12;
@@ -193,7 +195,8 @@ namespace AppCertificado
             this.Controls.Add(this.lblApellido);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblNombreCurso);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
