@@ -12,3 +12,5 @@ C:\Users\juven\source\repos\AppCertificado\AppCertificado\obj\Debug\AppCertifica
 C:\Users\juven\source\repos\AppCertificado\AppCertificado\obj\Debug\AppCertificado.csproj.CopyComplete
 C:\Users\juven\source\repos\AppCertificado\AppCertificado\obj\Debug\AppCertificado.exe
 C:\Users\juven\source\repos\AppCertificado\AppCertificado\obj\Debug\AppCertificado.pdb
+C:\Users\juven\source\repos\AppCertificado\AppCertificado\obj\Debug\AppCertificado.csproj.AssemblyReference.cache
+C:\Users\juven\source\repos\AppCertificado\AppCertificado\obj\Debug\AppCertificado.csproj.SuggestedBindingRedirects.cache
