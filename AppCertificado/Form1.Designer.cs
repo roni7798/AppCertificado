@@ -45,6 +45,7 @@ namespace AppCertificado
             this.GenerarCertificadoPDF = new System.Windows.Forms.Button();
             this.lblDNI = new System.Windows.Forms.Label();
             this.listaDocumentos_ComboBox = new System.Windows.Forms.ComboBox();
+            this.btnGetInformacion = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblNombreCurso
@@ -177,11 +178,22 @@ namespace AppCertificado
             this.listaDocumentos_ComboBox.Size = new System.Drawing.Size(767, 24);
             this.listaDocumentos_ComboBox.TabIndex = 12;
             // 
+            // btnGetInformacion
+            // 
+            this.btnGetInformacion.Location = new System.Drawing.Point(1228, 660);
+            this.btnGetInformacion.Name = "btnGetInformacion";
+            this.btnGetInformacion.Size = new System.Drawing.Size(222, 23);
+            this.btnGetInformacion.TabIndex = 13;
+            this.btnGetInformacion.Text = "Información del sistema";
+            this.btnGetInformacion.UseVisualStyleBackColor = true;
+            this.btnGetInformacion.Click += new System.EventHandler(this.btnGetInformacion_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1600, 731);
+            this.Controls.Add(this.btnGetInformacion);
             this.Controls.Add(this.listaDocumentos_ComboBox);
             this.Controls.Add(this.GenerarCertificadoPDF);
             this.Controls.Add(this.GenerarCertificadoWord);
@@ -221,6 +233,7 @@ namespace AppCertificado
         private Button GenerarCertificadoPDF;
         private Label lblDNI;
         private ComboBox listaDocumentos_ComboBox;
+        private Button btnGetInformacion;
     }
 }
 

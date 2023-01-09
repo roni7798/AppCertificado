@@ -14,6 +14,8 @@ namespace AppCertificado
     {
         public string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
         public string[][] tipoDocumentos;
+        public static string nombreArchivo = "Certificado-Template.docx";
+        public string pathTemplate = @"C:\Program Files (x86)\RoniCorp\Certificados\" + nombreArchivo;
 
         public Form1()
         {
@@ -68,7 +70,7 @@ namespace AppCertificado
 
         private void CrearArchivo()
         {
-            File.Copy(@"C:\Program Files (x86)\RoniCorp\Certificados\Certificado-Template.docx", path + @"\Certificado_" + txtNombre.Text + "_" + txtApellido.Text + ".docx");
+            File.Copy(pathTemplate, path + @"\Certificado_" + txtNombre.Text + "_" + txtApellido.Text + ".docx");
         }
 
         private void ModificarArchivo(List<string> parametros, List<string> valores)
@@ -206,6 +208,17 @@ namespace AppCertificado
                 MostrarMensajePDF();
                 BlanquearDatos();
             }
+        }
+
+        private void btnGetInformacion_Click(object sender, EventArgs e)
+        {
+            string mensaje = "Podés modificar el template para generar nuevos certificados!\n" +
+                "\nPara hacerlo, se recomienda hacerle una copia al template actual y luego modificarlo a gusto. " +
+                "\nRecordá que el nombre del archivo que tomará el programa es el siguiente: " + nombreArchivo + "\n"+
+                " \nEl template actual se encuentra en: \n" + 
+                pathTemplate;
+            string title = "Información del sistema";
+            MessageBox.Show(mensaje, title);
         }
     }
         
